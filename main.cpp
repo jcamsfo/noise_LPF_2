@@ -101,6 +101,12 @@ int main() {
     // Create the parabolic lookup table
     cv::Mat lut = createParabolicLUT();
 
+    cv::namedWindow("Blended Image Playback", cv::WINDOW_NORMAL); // Use WINDOW_NORMAL to allow resizing
+    cv::setWindowProperty("Blended Image Playback", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN); // Set window to fullscreen
+
+
+
+
     while (true) {
         auto loopStartTime = std::chrono::steady_clock::now();
 
